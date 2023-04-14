@@ -11,9 +11,13 @@
 \usepackage{lipsum} 
 \usepackage{subfig}
 \usepackage{animate}
+\usepackage{epstopdf}
 
 \title{\Huge{OkB}\\Fyzické otázky}
 \author{\huge{Lukáš Lejdar}}
+
+\epstopdfDeclareGraphicsRule{.gif}{png}{.png}{convert gif:#1 png:\OutputFile}
+\AppendGraphicsExtensions{.gif}
 
 \date{}
 \setlength\parindent{0pt}
@@ -188,23 +192,24 @@ tělesa, rozklad sil, dvojice sil, těžiště, rovnovážné polohy, otáčivý
 moment setrvačnosti, kinetická energie rotujícího tělesa, [moment hybnosti, pohybová
 rovnice pro rotující těleso].}
 \vspace{0.5cm}
-\textbf{tuhe teleso} teleso jehoz tvar se nemeni ucinkem libovolne velkych sil. Pohyb takoveho telesa je slozeny ze 2 pohybu: translace, rotace. \\
+\textbf{tuhe teleso} = teleso jehoz tvar se nemeni ucinkem libovolne velkych sil. Pohyb takoveho telesa je slozeny ze 2 pohybu: translace, rotace. \\
 Newtonovy zakony jednoznacne popisuji, jak se takove teleso pohyhuje, neni to ale prakticky zpusob, jak s nimi zachazet. Proto je potreba zavest nove velicny, ketre lepe vystihnout tento novy otacivy pohyb. \\
-Vsechny nasledujici rovnice predpokladaji, ze pocatek lezi na ose otaceni
-\cor{Moment hybnosti}{$L=r \times p$}
+Vsechny nasledujici rovnice predpokladaji, ze pocatek lezi na ose otaceni a ze neprobiha posuvny pohyb
+\cor{Moment hybnosti}{$L=r \times p$ [$kgm^2/s$]}
 \frm{
   $\frac{\diff L}{\diff t} = \dot r \times p + r \times \dot p$ \\[5pt]
 $\frac{\diff L}{\diff t} = \frac{p \times p}{m} + r \times f$ \\[5pt]
 $\frac{\diff L}{\diff t} = r \times f$ 
 }
-\cor{Moment sily}{$\frac{\diff L}{\diff t} = M$ \hspace{10cm}... ekvivalentni s $\frac{\diff p}{\diff t}=F$}
+
+\cor{Moment sily}{$\frac{\diff L}{\diff t} = M$ [N/m][$kgm^2/s^2$]\hspace{10cm}... ekvivalentni s $\frac{\diff p}{\diff t}=F$}
 \textbf{Pro tuhe teleso}
 \frm{
 \begin{wrapfigure}[11]{L}{5cm}
   \includegraphics[width=5cm]{images/rigidbody.png}
 \end{wrapfigure}%
 \begin{align*}
-  &dL=r \times p \text{, } dp = vdm=(w \times r)dm \\
+  &dL=r \times dp \text{, } dp = vdm=(w \times r)dm \\
   &L=\int r \times (w \times r) dm \\
   &r \times (w \times r) = 
   \begin{vmatrix}
@@ -229,7 +234,8 @@ $\frac{\diff L}{\diff t} = r \times f$
   \end{pmatrix}
 \end{align*}
 }
-\cor{Moment setrvacnosti}{$L_i=I_{ij}w_j$}
+\cor{Moment setrvacnosti}{$L_i=I_{ij}w_j$ \hspace{10cm}... ekvivalentni s $p=mv$}
+
 \textbf{Kineticka energie}
 \frm{
   $\diff E_k = \frac{1}{2}\diff m v^2=\frac{1}{2} \diff m |w \times r|^2$ \\[10pt]
@@ -245,29 +251,29 @@ $\frac{\diff L}{\diff t} = r \times f$
   \end{pmatrix}
   = \frac{1}{2}w^TIw=\frac{1}{2}wL$ \\
 }
-\textbf{Hlavni osy tuheho telesa}, kde osa otaceni prochazi tezistem
+\textbf{Hlavni osy tuheho telesa} (osa otaceni prochazi tezistem)
 \frm{
 \begin{wrapfigure}[11]{L}{3cm}
   \includegraphics[width=3cm]{images/principal_axis.png}
 \end{wrapfigure}%
 \begin{align*}
-  [FB]
+  &[EB]
   \begin{pmatrix}
     I_{xx} & I_{xy} & I_{xz} \\
     I_{yx} & I_{yy} & I_{yz} \\
     I_{zx} & I_{zy} & I_{zz} \\
   \end{pmatrix}_B
-  [FB]^T=
+  [EB]^T=
   \begin{pmatrix}
-    I_{xx} & 0 & 0 \\
-    0 & I_{yy} & 0 \\
-    0 & 0 & I_{zz} \\
-  \end{pmatrix}_F \\[10pt] 
+    I_{1} & 0 & 0 \\
+    0 & I_{2} & 0 \\
+    0 & 0 & I_{3} \\
+  \end{pmatrix}_E \\[10pt] 
+&\includegraphics[width=5cm]{images/wow.jpeg}
 \end{align*}
 }
-\animategraphics[height=2.8in,autoplay,controls]{12}{images/wow/wow-}{0}{18} \\
-\animategraphics[autoplay,controls,loop,scale=1]{12}{images/wow/wow-}{0}{18}
-... epicka magie, ktere nerozumim 
+... epicka magie, ktere nerozumim. Kazdemu tuhemu telesu lze najit 3 na sebe kolme osy otaceni(vektory baze E), takove, ze pri rotaci je s nimi vektor Momentu Hybnosti rovnobezny, viz eigenvalues, eigenvectors.
+\textbf{rovnovazne polohy} : poloha stala, vratka, volna
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -279,6 +285,26 @@ $\frac{\diff L}{\diff t} = r \times f$
 v tekutinách, Pascalův zákon, hydrostatický tlak, vztlaková síla, Archimédův zákon,
 atmosférický tlak, proudění kapaliny, rovnice kontinuity, Bernoulliova rovnice, vnitřní
 tření, proudění reálné kapaliny, obtékání těles, odpor prostředí.}
+\vspace{0.5cm}
+\textbf{tekutiny = kapaliny + plyny} \\
+\textbf{kapaliny} : nestlacitelne, nerozpinave, lisi se mezi sebou vnitrnim trenim \\
+\textbf{stlacitelne, rozpinave, castice dale od sebe, rychlejsi} \\
+\textbf{idealni kapalina} dokonale tekuta, bez vnitrniho treni, naprosto neztlacitelna\\
+\textbf{idealni plyn} dokonale tekuty, bez vnitrniho treni, dokonale ztlacitelny \\
+\cor{Tlak}{$p=\frac{F}{S}$ [$N/m^2$]}
+\cor{Pascaluv zakon}{Tlak vyvolany vnejsi silou, ktera pusobi na kapalne teleso v uzavrene nadobe, je ve vsech mistech kapaliny stejny}
+\textbf{hydraoulicka zarizeni}
+\frm{$\frac{F_1}{S_1} = \frac{F_2}{S_2}$}
+\textbf{hydrostaticky tlak}
+\frm{$p = h \rho g$}
+ve stejne vyssce je v kapaline vsude stejny tlak. Mista o stejnem hydrostatickem tlaku - hladiny
+\textbf{Atmosfericky tlak} $p\neq h \rho g$, vzduch neni nestlacitelny. S teplotou se meni
+standratni atmosfericky tlak $p=1013,25 hPa$
+\textbf{Archimeduv zakon}
+\frm{$F_{vz}=F_{h1}-F_{h2}=V \rho g$ \hspace{8cm} V : ponorena cast telesa}
+
+
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
