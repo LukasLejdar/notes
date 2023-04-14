@@ -1,0 +1,493 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{lipsum} 
+\usepackage{subfig}
+
+\title{\Huge{OkB}\\Fyzické otázky}
+\author{\huge{Lukáš Lejdar}}
+
+\date{}
+\setlength\parindent{0pt}
+\graphicspath{ {./images/} }
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Kinematika hmotného bodu}
+\dfn{Pojmy}{Hmotný bod, vztažná soustava, polohový vektor, trajektorie, dráha, rychlost okamžitá a
+průměrná, závislost rychlosti a dráhy na čase, zrychlení tečné a normálové, pohyb
+přímočarý, křivočarý (úhlová rychlost), rovnoměrný, rovnoměrně zrychlený nebo
+zpomalený, volný pád, rovnoměrný pohyb po kružnici. \\
+}
+\vspace{0.5cm}
+\textbf{kinematika} : zkouma jak se telesa pohybuji \\
+\textbf{hmotný bod} : telso, ktere pozbyva rozmeru \\ 
+Poloha a pohyb zkoumaných těles jsou určovány vzhledem ke zvolené \textbf{vztažné soustavě}, tedy vzhledem ke zvolené skupině těles, ktere jsou vzajemne v klidu, nebo ve znamem pohybu. \\
+polohu vyjadrujeme pomoci \textbf{polohoveho vektoru} \\
+\textbf{prumerna rychlost} je vektorova hodnota, definovana jako 
+\frm{$\vec{v}=\frac{\Delta \vec{s}}{\Delta t}$}
+\textbf{okamzita} je limitni hodnota prumerne \\    
+\textbf{draha} je delka \textbf{trajektorie} $\vec{s}$ \\
+\frm{$\vec{a}=\frac{\Delta \vec{v}}{\Delta t}$}
+\textbf{zrychleni} je take vektorova velicina, tzn muzeme definovat \textbf{normalovou} a \textbf{tecnou} slozku. Normalova je rovnobezna s vektorem rychlosti, tecna je na nej kolma. Tecna slozka nekona praci.
+V pripade rovnomerneho pohybu po kruznici spocitame je tecne zrychleni 
+\frm{$a=w^2r$ \\ $v=wr$}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Dynamika hmotného bodu}
+\dfn{Pojmy}{Volný hmotný bod, síla a její účinky, skládání sil, Newtonovy pohybové zákony,
+inerciální vztažná soustava, hybnost, impuls síly, zákon zachování hybnosti, setrvačné
+síly, neinerciální vztažná soustava.\\}
+
+\vspace{0.5cm}
+\textbf{dynamika} je soucast mechaniky, ktera popisuje jak se teleso pohybuje 
+\cor{\textbf{Newtonovy zakony zni}}{
+  \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+		\item \label{n:1} Jestlize vyslednice sil pusobocich na teleso je 0, potom teleso setrvava v klidu, nebo rovnomernem primocarem pohybu.  
+    \item \label{n:2}	Jestliže na těleso působí síla, pak se těleso pohybuje zrychlením, které je přímo úměrné působící síle a nepřímo úměrné hmotnosti tělesa. Matematicky lze vyjadrit jako, $\vec{F}=\frac{d(mv)}{dt}$
+		\item \label{n:3} vzájemná působení dvou těles jsou vždy stejně velká a míří na opačné strany.
+\end{enumerate}}
+\frm{
+  $s=\frac{1}{2}at^2\\
+  \dot{s}=v=at\\
+  \ddot{s}=a\\$
+}
+\vspace{10pt}
+Existuji 2 typy \textbf{vztaznych soustav}. Inercialni je takova soustava, ve ktere plati vsechny Newtonovy pohybove zakony.Naopak neinercialni sst se vzhledem k inercialni pohybuje se zrychlenim, tzn neplati 1. ani 3. Newtonuv zakony \\
+\textbf{volny bod} je potom takovy bod, na ktery nepusobi zadna vysledna sila, vuci takovemu bodu muzeme definovat inercialni vztaznou soustavu.\\
+Kineticka sila zachovana jen u absolutne pruznych objektu. V pripade absolutne nepruzneho objektu plati \textbf{zakon zachovani hybnosti}. \\
+\frm{
+  $E=\frac{1}{2}mv^2 \\
+  \dot{E}=p=mv \\ 
+  \ddot{E}=F$ \\
+}
+\textbf{impuls sily} je zmena hybnosti za cas
+\frm{\(I=\int_{}^{}F\,dt=\Delta p\)}
+\textbf{treci sila} $N$ pritlacna sila, $\mu$ koeficient treni
+\frm{$f=\mu N$}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Energie, práce, výkon}
+\dfn{Pojmy}{Mechanická práce, výpočet práce konstantní nebo proměnné síly, mechanická energie
+kinetická a potenciální (tíhová, tlaková, pružnosti), výkon, účinnost, zákon zachování
+energie, [vnitřní energie, práce plynu].}
+\vspace{0.5cm}
+\textbf{Mechanicka prace} : fyz velicina, ktera vyjadruje drahovy ucinek sily
+\frm{$W=\int \vec{F}d\vec{s} = m \int\frac{d \vec{v}}{dt}d\vec{s}=\frac{1}{2}mv^2$ [J] [$\frac{kg m^2}{s^2}$]}
+Pomoci \textbf{Energie} telesu prisuzujeme schopnost konat praci. \\
+\textbf{Vykon} je prace za cas
+\frm{$P=\frac{dE}{dt}$ [W] [$\frac{kg m^2}{s^3}$]}
+Jakmile pusobi sila, muzu ji vyjadrit jako silove pole. Pokud toto vektorove pole je konzervativni, muzu definovat vuci nejakemu bodu \textbf{potencialni energii}, tzn drahovy integral k tomuto bodu. Diky vlastnostem takoveho siloveho pole je mechanicka energie konstantini.
+\textbf{potencialni energie tihova}
+\frm{$E_p=\int \vec{F}d\vec{s}=mgh$}
+\textbf{potencialni energie tlakova} : v trubce o obsahu S je voda, ktera na pohyblivou prepazku, pusobi silou $\vec{F}$. Tento jev oznacujeme tlak v kapaline.
+\frm{$p=\frac{F}{S}$}
+\frm{$W=\int p\vec{S}d\vec{l}=pV+\int \dot{p} V dl$}
+\textbf{Potencialni energie} pro Hookovskou pruzinu 
+\frm{$W=\int-k y \diff y=-\frac{1}{2}ky^2$} 
+\textbf{ucinnost}
+\frm{$\eta = \frac{E_v}{E_p} = \frac{vykon}{prikon}$}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Gravitační pole}
+\dfn{Pojmy}{Gravitační pole, Newtonův gravitační zákon, intenzita a potenciál gravitačního pole,
+srovnání s polem elektrickým, radiální a homogenní pole, gravitační a tíhové zrychlení,
+práce v homogenním gravitačním poli, pohyby v homogenním a radiálním gravitačním
+poli, Keplerovy zákony.}
+\vspace{0.5cm}
+vsechna telesa, ktera maji hmotnost na sebe pusobi pritazlivou silou, popsanou  \textbf{Newtonovym gravitacnim zakonem} jako ... \textbf{intenzita Graavitacniho pole} aka \textbf{gravitacni zrychleni}
+\frm{$F=G\frac{m_1m_2}{r^2}$}
+do \textbf{tihoveho zrychleni} zapocitavame jeste odstredivou silu
+\frm{
+\begin{wrapfigure}[11]{L}{5cm}
+  \includegraphics[width=\linewidth]{tihovasila}
+\end{wrapfigure}%
+\begin{align*}
+  & \theta ... \text{uhel, ktery siraji vektory} \\[20pt]
+  & \vec{F_G}=\vec{F_g}+\vec{F_s} \\
+  & F_G^2=F_g^2+F_s+2cos(\theta)F_gF_s \\
+  & g^2=G^2\frac{M^2}{R^4}+w^4R^2cos(\theta)^2+2cos(\theta)^2 w^2 G\frac{M^2}{R} \\ 
+  & g=<9.78;9.83>\frac{m}{s^2} \\[45pt]
+\end{align*}
+}
+Na povrchu zeme muzeme gravitacni pole aproximovat jako \textbf{homogeni}. V kazdem pripade je vzdy Konzervativni
+Diky tomu muzeme definovat tzv \textbf{gravitacni potencial}. Je to energie, potrebna k preneseni telesa o hmotnosti m do bodu A. Pro jedine teleso o hmotnosti m v uzavrene soustave plati
+\frm{$\phi=\int_{\infty}^{R}G\frac{m}{r^2} \diff r = -G\frac{m}{R}-(-G\frac{m}{\infty})=-G\frac{m}{R}\\[5pt]
+2C=0$}
+Pro homogeni gravitacni pole mame $W=E=mgh$ \\
+\textbf{Gravitacni silocary} udavaji smer gravitacni sily, \textbf{ekvipotencialni plocha} je plocha, kde s konstantnim gravitacnim potencialem.
+\textbf{Pohyby teles v tihovem poli zeme}
+\frm{
+  $\vec{s}=\frac{1}{2}\vec{a}t^2 +\vec{v}t + \vec{s_0} \\[5pt]
+  \vec{a}=\begin{pmatrix}0\\-g \end{pmatrix} \\[5pt]
+  \vec{v}=\begin{pmatrix}v_x=v_0 \cos(\theta)\\v_y=v_0\sin(\theta) \end{pmatrix}$
+}
+doba vystupu do vysky h
+\frm{$t_max=-(-\frac{2v}{2g})=\frac{v}{g}$}
+
+\cor{\textbf{Keplerovy Zakony}}{
+  \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+		\item \label{n:1} Planety obíhají kolem Slunce po eliptických trajektoriích, v jejichž jednom společném ohnisku je Slunce. 
+    \item \label{n:2} Obsahy ploch opsaných průvodičem planety za stejný čas jsou stejně velké.
+    \item \label{n:3} Poměr druhých mocnin oběžných dob dvou planet je stejný jako poměr třetích mocnin délek jejich hlavních poloos. $\frac{T_1^2}{T_2^2}=\frac{a_1^3}{a_2^3}$ ll ll 
+\end{enumerate}}
+\textbf{Excentricita drahy} je jedna z 6 velicin zvanych elemty drahy, popisujicich presny pohyb planet. Udava typ obezne drahy, druh kuzelosecky. $2a > |F1F2|= 2ea$ e = 0 ... kruznice, 0 < e < 1 ... elipsa e=1 ... parabola, e > 1 ... hyperbola. \\
+
+\begin{figure}[!h]%
+    \centering
+    \includegraphics[width=6cm]{images/elipse.png}
+    \qquad
+    \includegraphics[width=5cm]{images/escape_velocity.png}
+\end{figure}
+\textbf{Pohyb teles v centralnim gravitacnim poli planety} \\
+$v_0$ ... kolmy pad dolu, $v_k$ ... pohyb po kruznici, v < $v_p$ ... pohyb po elipse, $v_p$ ... parabolicka unikova rychlost, $v_h$ ... druha kosmicka rychlost (hyperbola) \\
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Mechanika tuhého tělesa}
+\dfn{Pojmy}{Tuhé těleso, skládání sil v tuhém tělese, moment síly, podmínka rovnováhy tuhého
+tělesa, rozklad sil, dvojice sil, těžiště, rovnovážné polohy, otáčivý pohyb tuhého tělesa,
+moment setrvačnosti, kinetická energie rotujícího tělesa, [moment hybnosti, pohybová
+rovnice pro rotující těleso].}
+\vspace{0.5cm}
+\textbf{tuhe teleso} teleso jehoz tvar se nemeni ucinkem libovolne velkych sil. Pohyb takoveho telesa je slozeny ze 2 pohybu: translace, rotace. \\
+Newtonovy zakone dokazou jednoznacne popsat jak se takove teleso pohyhuje, neni to ale prakticky zpusob, jak z takovymy telesy zachazet. Proto je potreba zavest nove velicny, ketre lepe vystihnout tento novy otacivy pohyb. \\
+\cor{Moment hybnosti}{$L=r \times p$}
+\frm{
+  $\frac{\diff L}{\diff t} = \dot r \times p + r \times \dot p$ \\[5pt]
+$\frac{\diff L}{\diff t} = \frac{p \times p}{m} + r \times f$ \\[5pt]
+$\frac{\diff L}{\diff t} = r \times f$ 
+}
+\cor{Moment sily}{$\frac{\diff L}{\diff t} = M$ \hspace{10cm}... ekvivalentni s $\frac{\diff p}{\diff t}=F}
+\frm{$dL = r \times p$}
+\textbf{Pro tuhe teleso} 
+\frm{
+\begin{wrapfigure}[11]{L}{5cm}
+  \includegraphics[width=5cm]{images/rigidbody.png}
+\end{wrapfigure}%
+\begin{align*}
+  &dL=r \times p \text{, } dp = vdm=(w \times r)dm \\
+  &L=\int r \times (w \times r) dm \\
+  &r \times (w \times r) = 
+  \begin{vmatrix}
+    \hat x & \hat y  & \hat z \\
+    w_x & w_y & w_z \\
+    v_x & v_y & v_z
+  \end{vmatrix}
+  =
+  \begin{pmatrix}
+   w_x(y^2+z^2)-(w_y xy+w_zxz) \\
+   w_y(x^2+z^2)-(w_x xy+w_zyz)\\
+   w_z(x^2+y^2)-(w_x xz+w_yyz)
+ \end{pmatrix} \\[10pt]
+  &L=
+  \begin{pmatrix}
+    \int (y^2 + z^2) \diff m & - \int xy \diff m & - \int xz \diff m  \\
+    - \int xy \diff m & \int  (x^2 + z^2) \diff m & - \int yz \diff m \\
+    - \int xz \diff m & - \int yz \diff m & \int (x^2 + y^2) \diff m \\
+  \end{pmatrix}
+  \begin{pmatrix}
+   w_x \\ w_y \\ w_z 
+  \end{pmatrix}
+\end{align*}
+}
+\cor{Moment setrvacnosti}{$L=Iw$}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Mechanika kapalin a plynů}
+\dfn{Pojmy}{Struktura tekutin, silové působení mezi částicemi, ideální kapalina a plyn, tlak
+v tekutinách, Pascalův zákon, hydrostatický tlak, vztlaková síla, Archimédův zákon,
+atmosférický tlak, proudění kapaliny, rovnice kontinuity, Bernoulliova rovnice, vnitřní
+tření, proudění reálné kapaliny, obtékání těles, odpor prostředí.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Základní pojmy molekulové fyziky a termodynamiky}
+\dfn{Pojmy}{Kinetická teorie látek, Brownův pohyb, difúze, interakce mezi částicemi, modely struktur
+skupenství, látkové množství, Avogadrova konstanta, molární veličiny, stavové veličiny,
+rovnovážný stav, nultý termodynamický zákon, rovnovážný děj, vratný děj, vnitřní
+energie.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vnitřní energie, teplo, teplota}
+\dfn{Pojmy}{Vnitřní energie, změny vnitřní energie (práce, tepelná výměna), první termodynamický
+zákon, tepelná rovnováha, teplota, teplotní stupnice, třetí termodynamický zákon, měrná
+tepelná kapacita, kalorimetrická rovnice, přenos vnitřní energie (vedením, prouděním,
+zářením).}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Struktura a vlastnosti plynů}
+\dfn{Pojmy}{Model ideálního plynu, rozdělení molekul podle rychlosti, střední kvadratická rychlost,
+střední kinetická energie molekuly, teplota a tlak plynu, stavová rovnice pro ideální plyn,
+Avogadrův zákon, normální molární objem, tepelné děje s ideálním plynem a jejich
+grafické vyjádření, kruhový děj, Carnotův cyklus, tepelné a chladící stroje, druhý
+termodynamický zákon.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Struktura a vlastnosti pevných látek}
+\dfn{Pojmy}{Stavba látek z částic, silové působení mezi částicemi, druhy vazeb, látky amorfní a
+krystalické, model krystalové mřížky, poruchy v krystalové mřížce, deformace,
+normálové napětí, relativní prodloužení, Hookův zákon, křivka deformace, teplotní
+roztažnost.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 11
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Struktura a vlastnosti kapalin}
+\dfn{Pojmy}{Povrchová vrstva kapalin, povrchová energie, povrchové napětí, povrchová síla, jevy na
+rozhraní, kapilární tlak, kapilární jevy, teplotní roztažnost kapalin.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 12
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skupenské přeměny látek}
+\dfn{Pojmy}{Fázový diagram, trojný a kritický bod, modely struktury skupenství, vnitřní energie a její
+změny při změnách skupenství, vypařování, kondenzace, sytá pára, přehřátá pára, var,
+sublimace, tání, tuhnutí, měrné skupenské teplo přeměny, vlhkost vzduchu.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 13
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Mechanické kmity}
+\dfn{Pojmy}{Pohyb kmitavý, periodický, harmonický, kinematika harmonického pohybu (výchylka,
+rychlost, zrychlení, fáze, frekvence, perioda), skládání kmitů v jedné přímce, skládání
+kmitů navzájem kolmých, Lissajousovy obrazce, dynamika harmonického pohybu,
+pružina, kyvadlo, přeměny energie v oscilátorech, tlumené kmity, nucené kmity,
+rezonance.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 14
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Mechanické vlnění}
+\dfn{Pojmy}{Vznik, šíření a druhy vlnění (postupné, stojaté, příčné, podélné), rychlost šíření vlny
+(fázová rychlost), vlnová délka, rovnice postupné vlny, interference vlnění, koherentní
+vlnění, odraz vlnění, Huygensův princip, zákon odrazu s lomu, ohyb vlnění, zvuk,
+Dopplerův jev, souvislosti s optikou.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 15
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Elektrostatické pole}
+\dfn{Pojmy}{Elektrický náboj, zákon zachování náboje, Coulombův zákon, elektrostatické pole,
+homogenní a radiální pole, intenzita elektrického pole, elektrický potenciál, elektrické
+napětí, práce v homogenním elektrickém poli, vodič a nevodič v elektrickém poli,
+elektrostatická indukce, kapacita vodiče, kapacita soustavy vodičů, kondenzátory, řazení
+kondenzátorů.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 16
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Elektrický proud v kovech}
+\dfn{Pojmy}{Elektrický proud, elektromotorické napětí, elektronová vodivost, Ohmův zákon,
+voltampérová charakteristika, elektrický odpor, závislost odporu na rozměrech vodiče a
+na teplotě, supravodivost, termočlánek, Ohmův zákon pro uzavřený obvod, vnitřní odpor
+zdroje, Kirchhoffovy zákony, výkon elektrického proudu.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 17
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Elektrický proud v polovodičích}
+\dfn{Pojmy}{Polovodiče vlastní, příměsové, typ N, typ P, přechod PN, diodový jev, dioda jako
+usměrňovač, Graetzovo zapojení, tranzistorový jev, tranzistor jako zesilovač, termistory,
+diody LED, fotodiody.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 18
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Elektrický proud v kapalinách a plynech}
+\dfn{Pojmy}{Elektrolytická disociace, elektrolýza, závislost proudu v elektrolytu na napětí, Faradayovy
+zákony elektrolýzy, galvanické články, elektrolytická polarizace, akumulátory, ionizace,
+nesamostatný a samostatný výboj, voltampérová charakteristika výboje, doutnavý výboj,
+jiskra, oblouk, katodové záření, elektronový paprsek, emise elektronů.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 19
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Stacionární magnetické pole}
+\dfn{Pojmy}{Magnetické pole elektrického proudu, magnetické indukční čáry, Ampérovo pravidlo,
+magnetická indukce, magnetické pole vodičů s proudem, silové působení na náboje a
+vodič s proudem, Flemingovo pravidlo, silové působení mezi dvěma vodiči s proudem,
+definice ampéru, magnetické vlastnosti látek (diamagnetické, paramagnetické,
+feromagnetické), magnetická hystereze (látky magneticky měkké a tvrdé).}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 20
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Nestacionární magnetické pole}
+\dfn{Pojmy}{Elektromagnetická indukce, Faradayův zákon elektromagnetické indukce, magnetický
+indukční tok, Lenzův zákon, Foucaultovy proudy, vlastní indukce, indukčnost,
+přechodové děje.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 21
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Střídavé elektrické proudy}
+\dfn{Pojmy}{Vznik střídavého proudu, generátory, napětí fázové a sdružené, elektromotory,
+transformátor, harmonický průběh střídavého proudu, obvody s R, L, C, sériový a
+paralelní kmitavý obvod (rezonance), výkon střídavého proudu, [řešení obvodů pomocí
+komplexních čísel].}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 22
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Elektromagnetické pole, kmity, vlnění}
+\dfn{Pojmy}{Kmitavý obvod jako zdroj elektromagnetického pole, vznik elektromagnetického vlnění,
+elektromagnetický dipól, vysílač, přijímač, sdělovací technika (mikrofon, reproduktor,
+modulace, rozhlas, televize), spektrum elektromagnetického vlnění.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 23
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Geometrická optika}
+\dfn{Pojmy}{Šíření světla, optické prostředí, [Fermatův princip], zákon odrazu a lomu světla, rozklad
+(disperze) světla, optická soustava, zrcadla, čočky, zobrazovací rovnice, příčné zvětšení,
+oko, optické přístroje.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 24
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vlnová optika}
+\dfn{Pojmy}{Spektrum elektromagnetického vlnění, vznik a podstata světla, šíření světla, Huygensův
+princip, odraz, lom, interference světla, koherence, Youngův pokus, interference na tenké
+vrstvě (Newtonova skla), holografie, ohyb světla, polarizace.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 25
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Fotometrie}
+\dfn{Pojmy}{Zářivý tok (světelný tok), zářivost (svítivost), ozáření (osvětlení), tepelné záření, záření
+černého tělesa, Stefan-Boltzmanův zákon, Wienův posunovací zákon, Planckův zákon,
+kvantum energie, spektrum elektromagnetického záření (UV, RTG, $\gamma$)}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 26
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Základy speciální teorie relativity}
+\dfn{Pojmy}{Inerciální soustavy, Galileiho princip relativity, Michelson - Morley, Einsteinovy
+postuláty, Lorentzova transformace, relativnost současnosti, dilatace času, kontrakce
+délek, skládání rovnoběžných rychlostí, relativistická hmotnost, relativistická hybnost,
+relativistická energie (E=mc2).}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 27
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Základy kvantové fyziky}
+\dfn{Pojmy}{Kvantování energie (Planck), fotoelektrický jev (Einsteinova rovnice, foton), Comptonův
+jev, vlnové vlastnosti částic (de Broglieovy vlny), korposkulárně vlnový dualismus,
+Davisson-Germerův pokus, [Schrödingerova rovnice], Heisenbergovy relace neurčitosti,
+kvantování fyzikálních veličin, princip korespondence.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 28
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Fyzika elektronového obalu}
+\dfn{Pojmy}{Modely atomu, spektrum vodíku, Franck-Hertzovy pokusy, kvantově mechanický model
+atomu vodíku, kvantová čísla, orbitaly, spin, Pauliho princip, elektronová konfigurace,
+periodická soustava prvků, emise světla, laser.}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maturitni otazka 29
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Fyzika atomového jádra}
+\dfn{Pojmy}{Modely atomového jádra, jaderné síly, závislost vazebné energie připadající na jeden
+nukleon na nukleonovém čísle, hmotnostní úbytek, radioaktivita, zákon radioaktivní
+přeměny (rozpadu), poločas rozpadu, rozpadové řady, umělá radioaktivita, jaderné reakce,
+jaderná energetika, detektory částic, urychlovače částic.}
+
+
+\end{document}
