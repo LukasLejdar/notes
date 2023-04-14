@@ -10,6 +10,7 @@
 \usepackage{wrapfig}
 \usepackage{lipsum} 
 \usepackage{subfig}
+\usepackage{animate}
 
 \title{\Huge{OkB}\\Fyzické otázky}
 \author{\huge{Lukáš Lejdar}}
@@ -188,16 +189,16 @@ moment setrvačnosti, kinetická energie rotujícího tělesa, [moment hybnosti,
 rovnice pro rotující těleso].}
 \vspace{0.5cm}
 \textbf{tuhe teleso} teleso jehoz tvar se nemeni ucinkem libovolne velkych sil. Pohyb takoveho telesa je slozeny ze 2 pohybu: translace, rotace. \\
-Newtonovy zakone dokazou jednoznacne popsat jak se takove teleso pohyhuje, neni to ale prakticky zpusob, jak z takovymy telesy zachazet. Proto je potreba zavest nove velicny, ketre lepe vystihnout tento novy otacivy pohyb. \\
+Newtonovy zakony jednoznacne popisuji, jak se takove teleso pohyhuje, neni to ale prakticky zpusob, jak s nimi zachazet. Proto je potreba zavest nove velicny, ketre lepe vystihnout tento novy otacivy pohyb. \\
+Vsechny nasledujici rovnice predpokladaji, ze pocatek lezi na ose otaceni
 \cor{Moment hybnosti}{$L=r \times p$}
 \frm{
   $\frac{\diff L}{\diff t} = \dot r \times p + r \times \dot p$ \\[5pt]
 $\frac{\diff L}{\diff t} = \frac{p \times p}{m} + r \times f$ \\[5pt]
 $\frac{\diff L}{\diff t} = r \times f$ 
 }
-\cor{Moment sily}{$\frac{\diff L}{\diff t} = M$ \hspace{10cm}... ekvivalentni s $\frac{\diff p}{\diff t}=F}
-\frm{$dL = r \times p$}
-\textbf{Pro tuhe teleso} 
+\cor{Moment sily}{$\frac{\diff L}{\diff t} = M$ \hspace{10cm}... ekvivalentni s $\frac{\diff p}{\diff t}=F$}
+\textbf{Pro tuhe teleso}
 \frm{
 \begin{wrapfigure}[11]{L}{5cm}
   \includegraphics[width=5cm]{images/rigidbody.png}
@@ -228,8 +229,45 @@ $\frac{\diff L}{\diff t} = r \times f$
   \end{pmatrix}
 \end{align*}
 }
-\cor{Moment setrvacnosti}{$L=Iw$}
-
+\cor{Moment setrvacnosti}{$L_i=I_{ij}w_j$}
+\textbf{Kineticka energie}
+\frm{
+  $\diff E_k = \frac{1}{2}\diff m v^2=\frac{1}{2} \diff m |w \times r|^2$ \\[10pt]
+  $E_k = \int \frac{1}{2}\diff m((w_yz-w_zy)^2+(w_xz-w_zx)^2+(w_xy-w_yx)^2)$ \\[10pt]
+  $E_k = \frac{1}{2}\begin{pmatrix} w_x w_y w_z \end{pmatrix}
+  \begin{pmatrix}
+  I_{xx} & I_{xy} & I_{xz} \\
+  I_{yx} & I_{yy} & I_{yz} \\
+  I_{zx} & I_{zy} & I_{zz} \\
+  \end{pmatrix}
+  \begin{pmatrix}
+    w_x \\ w_y \\ w_z
+  \end{pmatrix}
+  = \frac{1}{2}w^TIw=\frac{1}{2}wL$ \\
+}
+\textbf{Hlavni osy tuheho telesa}, kde osa otaceni prochazi tezistem
+\frm{
+\begin{wrapfigure}[11]{L}{3cm}
+  \includegraphics[width=3cm]{images/principal_axis.png}
+\end{wrapfigure}%
+\begin{align*}
+  [FB]
+  \begin{pmatrix}
+    I_{xx} & I_{xy} & I_{xz} \\
+    I_{yx} & I_{yy} & I_{yz} \\
+    I_{zx} & I_{zy} & I_{zz} \\
+  \end{pmatrix}_B
+  [FB]^T=
+  \begin{pmatrix}
+    I_{xx} & 0 & 0 \\
+    0 & I_{yy} & 0 \\
+    0 & 0 & I_{zz} \\
+  \end{pmatrix}_F \\[10pt] 
+\end{align*}
+}
+\animategraphics[height=2.8in,autoplay,controls]{12}{images/wow/wow-}{0}{18} \\
+\animategraphics[autoplay,controls,loop,scale=1]{12}{images/wow/wow-}{0}{18}
+... epicka magie, ktere nerozumim 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
