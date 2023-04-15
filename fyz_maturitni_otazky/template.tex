@@ -117,9 +117,9 @@ Jakmile pusobi sila, muzu ji vyjadrit jako silove pole. Pokud toto vektorove pol
 \frm{$E_p=\int \vec{F}d\vec{s}=mgh$}
 \textbf{potencialni energie tlakova} : v trubce o obsahu S je voda, ktera na pohyblivou prepazku, pusobi silou $\vec{F}$. Tento jev oznacujeme tlak v kapaline.
 \frm{$p=\frac{F}{S}$}
-\frm{$W=\int p\vec{S}d\vec{l}=pV+\int \dot{p} V dl$}
+\frm{$E=\int p\vec{S}d\vec{l}=pV+\int \dot{p} V dl$}
 \textbf{Potencialni energie} pro Hookovskou pruzinu 
-\frm{$W=\int-k y \diff y=-\frac{1}{2}ky^2$} 
+\frm{$E=\int-k y \diff y=-\frac{1}{2}ky^2$} 
 \textbf{ucinnost}
 \frm{$\eta = \frac{E_v}{E_p} = \frac{vykon}{prikon}$}
 \newpage
@@ -139,7 +139,7 @@ vsechna telesa, ktera maji hmotnost na sebe pusobi pritazlivou silou, popsanou  
 do \textbf{tihoveho zrychleni} zapocitavame jeste odstredivou silu
 \frm{
 \begin{wrapfigure}[11]{L}{5cm}
-  \includegraphics[width=\linewidth]{tihovasila}
+  \includegraphics[width=\linewidth]{tihovasila.png}
 \end{wrapfigure}%
 \begin{align*}
   & \theta ... \text{uhel, ktery siraji vektory} \\[20pt]
@@ -162,7 +162,7 @@ Pro homogeni gravitacni pole mame $W=E=mgh$ \\
   \vec{v}=\begin{pmatrix}v_x=v_0 \cos(\theta)\\v_y=v_0\sin(\theta) \end{pmatrix}$
 }
 doba vystupu do vysky h
-\frm{$t_max=-(-\frac{2v}{2g})=\frac{v}{g}$}
+\frm{$t_{max}=-(-\frac{2v}{2g})=\frac{v}{g}$}
 
 \cor{\textbf{Keplerovy Zakony}}{
   \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
@@ -194,7 +194,6 @@ rovnice pro rotující těleso].}
 \vspace{0.5cm}
 \textbf{tuhe teleso} = teleso jehoz tvar se nemeni ucinkem libovolne velkych sil. Pohyb takoveho telesa je slozeny ze 2 pohybu: translace, rotace. \\
 Newtonovy zakony jednoznacne popisuji, jak se takove teleso pohyhuje, neni to ale prakticky zpusob, jak s nimi zachazet. Proto je potreba zavest nove velicny, ketre lepe vystihnout tento novy otacivy pohyb. \\
-Vsechny nasledujici rovnice predpokladaji, ze pocatek lezi na ose otaceni a ze neprobiha posuvny pohyb
 \cor{Moment hybnosti}{$L=r \times p$ [$kgm^2/s$]}
 \frm{
   $\frac{\diff L}{\diff t} = \dot r \times p + r \times \dot p$ \\[5pt]
@@ -202,7 +201,7 @@ $\frac{\diff L}{\diff t} = \frac{p \times p}{m} + r \times f$ \\[5pt]
 $\frac{\diff L}{\diff t} = r \times f$ 
 }
 
-\cor{Moment sily}{$\frac{\diff L}{\diff t} = M$ [N/m][$kgm^2/s^2$]\hspace{10cm}... ekvivalentni s $\frac{\diff p}{\diff t}=F$}
+\cor{Moment sily}{$\frac{\diff L}{\diff t} = M$ [N/m][$kgm^2/s^2$]\hspace{8cm}... ekvivalentni s $\frac{\diff p}{\diff t}=F$}
 \textbf{Pro tuhe teleso}
 \frm{
 \begin{wrapfigure}[11]{L}{5cm}
@@ -251,7 +250,7 @@ $\frac{\diff L}{\diff t} = r \times f$
   \end{pmatrix}
   = \frac{1}{2}w^TIw=\frac{1}{2}wL$ \\
 }
-\textbf{Hlavni osy tuheho telesa} (osa otaceni prochazi tezistem)
+\textbf{Hlavni osy tuheho telesa} : V nasledujicich rovnicich predpokladame, ze osa otaceni prochazi tezistem a zaroven pocatekem.
 \frm{
 \begin{wrapfigure}[11]{L}{3cm}
   \includegraphics[width=3cm]{images/principal_axis.png}
@@ -272,8 +271,22 @@ $\frac{\diff L}{\diff t} = r \times f$
 &\includegraphics[width=5cm]{images/wow.jpeg}
 \end{align*}
 }
-... epicka magie, ktere nerozumim. Kazdemu tuhemu telesu lze najit 3 na sebe kolme osy otaceni(vektory baze E), takove, ze pri rotaci je s nimi vektor Momentu Hybnosti rovnobezny, viz eigenvalues, eigenvectors.
+... epicka magie, ktere nerozumim. Kazdemu tuhemu telesu lze najit 3 na sebe kolme osy otaceni(tzn Hlavni osy)(osove vektory baze E), takove, ze pri rotaci je s nimi vektor Momentu Hybnosti rovnobezny, viz eigenvalues, eigenvectors. \\
+\textbf{Moment setrvacnosti pro kouli} : ze symetrie koule vyplyva, ze pri totozne uhlove rychlosti, musi byt ve vsech smerech stejne L => $I_1=I_2=I_3=I_{koule}$, $L=I_{koule}w$
+\frm{
+  \begin{align*}
+  I &=\int y^2+z^2 \diff m \\
+    &=\rho \int y^2 + z^2 \diff V \\
+    &=2 \rho \int_{0}^{R}\int_{0}^{\sqrt{R^2-y^2}} 2\pi r*r^2 \diff r \diff y \\
+    &=2 \rho \int_{0}^{R}\frac{1}{2} \pi (R^2 - y^2)^2 \diff y \\
+    &= \pi \rho (R^4y-\frac{2}{3}R^2y^3+\frac{1}{5}y^5)\bigg |_{0}^{R} \\
+    &= \rho \frac{4}{3} \pi R^3 * \frac{2}{5}R^2 \\
+    &=\frac{2}{5} m R^2
+  \end{align*}
+}
+
 \textbf{rovnovazne polohy} : poloha stala, vratka, volna
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -288,23 +301,48 @@ tření, proudění reálné kapaliny, obtékání těles, odpor prostředí.}
 \vspace{0.5cm}
 \textbf{tekutiny = kapaliny + plyny} \\
 \textbf{kapaliny} : nestlacitelne, nerozpinave, lisi se mezi sebou vnitrnim trenim \\
-\textbf{stlacitelne, rozpinave, castice dale od sebe, rychlejsi} \\
+\textbf{plyny} : stlacitelne, rozpinave, castice dale od sebe, rychlejsi\\
 \textbf{idealni kapalina} dokonale tekuta, bez vnitrniho treni, naprosto neztlacitelna\\
-\textbf{idealni plyn} dokonale tekuty, bez vnitrniho treni, dokonale ztlacitelny \\
+\textbf{idealni plyn} dokonale tekuty, bez vnitrniho treni, dokonale ztlacitelny
 \cor{Tlak}{$p=\frac{F}{S}$ [$N/m^2$]}
+muze byt vyvolany vnejsi silou : 
 \cor{Pascaluv zakon}{Tlak vyvolany vnejsi silou, ktera pusobi na kapalne teleso v uzavrene nadobe, je ve vsech mistech kapaliny stejny}
-\textbf{hydraoulicka zarizeni}
+\textbf{hydraulicka zarizeni} : na zaklade Pascalova zakona meni pomer pusobicich sil 
 \frm{$\frac{F_1}{S_1} = \frac{F_2}{S_2}$}
 \textbf{hydrostaticky tlak}
-\frm{$p = h \rho g$}
-ve stejne vyssce je v kapaline vsude stejny tlak. Mista o stejnem hydrostatickem tlaku - hladiny
-\textbf{Atmosfericky tlak} $p\neq h \rho g$, vzduch neni nestlacitelny. S teplotou se meni
-standratni atmosfericky tlak $p=1013,25 hPa$
-\textbf{Archimeduv zakon}
-\frm{$F_{vz}=F_{h1}-F_{h2}=V \rho g$ \hspace{8cm} V : ponorena cast telesa}
-
-
-
+\frm{$p = h \rho g$ \hspace{20pt} ... prekvapive plati bez ohledu na tvar nadoby}
+ve stejne vysce je v kapaline vsude stejny tlak. Mista o stejnem hydrostatickem tlaku - hladiny \\
+\textbf{Atmosfericky tlak} $p\neq h \rho g$, protoze vzduch neni nestlacitelny. Za beznych podminek $p=1013,25 hPa$. Meni se s teplotou vzduchu. Vitr je napriklad zpusobeny rozdilem v tlaku. \\
+\textbf{barometr} : nastroj na mereni atmosferickeho tlaku
+\textbf{Archimeduv zakon} - tlak na horni plocu telesa je mensi, nez na tu spodni => sila pusobici vzhuru \\
+\frm{$F_{vz}=F_{h1}-F_{h2}=V \rho g$ }
+... teleso ponorene do kapaliny je nadnaseno silou rovnajici se tize tekutiny stejneho objemu
+Na kazde v kapaline tedy pusobi gravitacni a tlakova sila. Jestli se teleso ponori, nebo ne tudiz zalezi na tom jestli je hustota telesa vetsi nez hustota vody.
+\textbf{Proudeni kapalin} \\
+\textbf{stacionarni} : rychlost kapaliny v danem miste zustava konstanti s casem \\
+\textbf{nestacionarni} : rychlost se meni \\
+\textbf{laminarni} : proudnice rovnobezne \\
+\textbf{turbulentni} : chaoticke \\
+\cor{Objemovy prutok}{$Q_v=\frac{V}{t}=\frac{Sl}{t}=Sv$ [$m^3/s$]}
+Kvuli nestlacitelnosti kapaliny musi byt objemovy prutok trubice ve vsech mistech stejny, bez ohledu na rozsirovani, nebo zuzeni. \\
+\cor{Bernouliho rovnice}{
+hydrostaticky tlak je ve stejnych hloubkach stejny jen za predpokladu ze je kapalina v klidu. \\
+pro proudici kapalinu plati jine zakonitosti. Lze popsat pomoci Zakonu zachovani energie. My se, ale budeme zabyvat jen stacionarnim proudenim kapalin \\[10pt]
+$E=E_k+E_p$ \\[10pt]
+pri zmene rychlosti proudici kapaliny ve zuzeni/rozsireni trubice se musi zachovat jeji celkova energie. Je tudiz potreba definovat novou tlakovou potencialni energii. \\[10pt]
+$E_p=\int p\vec{S}d\vec{l}=pV+\int \dot{p} V dl = pV$  \\[10pt]
+... proudeni je stacionarni, tkaze p se nemeni s casem. My ho navic povazujeme za konstantni v jednotlivych usecich nadoby(trubky) \\[10pt]
+$E_k=\frac{1}{2}mv^2=\frac{1}{2} \rho V v^2$
+}
+\frm{
+  \begin{wrapfigure}[11]{L}{5cm}
+    \vspace*{-0.2cm}
+    \includegraphics[width=\linewidth]{images/bernouli.png}
+  \end{wrapfigure}%
+  \begin{align*}
+    p_1+\frac{1}{2}\rho v_1^2=p_2+\frac{1}{2}\rho v_2^2 \\ 
+  \end{align*} 
+}
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
