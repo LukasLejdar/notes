@@ -12,6 +12,7 @@
 \usepackage{subfig}
 \usepackage{animate}
 \usepackage{epstopdf}
+\usepackage{tabularx}
 
 \title{\Huge{OkB}\\Fyzické otázky}
 \author{\huge{Lukáš Lejdar}}
@@ -22,7 +23,9 @@
 \date{}
 \setlength\parindent{0pt}
 \graphicspath{ {./images/} }
+
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand\setItemnumber[1]{\setcounter{enumi}{\numexpr#1-1\relax}}
 
 \begin{document}
 
@@ -354,6 +357,87 @@ $E_k=\frac{1}{2}mv^2=\frac{1}{2} \rho V v^2$
 skupenství, látkové množství, Avogadrova konstanta, molární veličiny, stavové veličiny,
 rovnovážný stav, nultý termodynamický zákon, rovnovážný děj, vratný děj, vnitřní
 energie.}
+\vspace{0.5cm}
+\cor{Kinetikcka teorie latek}{teorie, ktera objasnuje strukturu a vlastnosti latek pohybem a vzajemnym pusobenim atomu molekul a iontu, z nichz  se latky skladaji.
+
+  \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item \label{n:1} Vsechny latky(kterehokoliv skupenstvi) jsou slozeny z castic (atomy, molekuly, ionty). Mezi casticemi jsou mezery, proto mluvime o nespojite (diskretni strukture latek)
+    \item \label{n:2} Tyto castice se neustale a neusporadane pohybuji (=tepelny pohyb) => maji kinetickou energii
+  \end{enumerate}
+}
+o tepelnem pohybu castic v latkach svedci mnohe jevy \\
+\textbf{Difuze} : samovolny pohyb molekul rozpustene latky z mista o vyssi koncentraci do mista s nizsi koncentraci. Za urcitou dobu se daa latka rpz[ty li do celeho objemu rooztoku a jeji koncetrace bude vsude stejna \\
+\textbf{Brownuv pohyb} : nepretrzity a chaoticky pohyb mikroskopickych castic v plynne, nebo kapalnem mediu. Rychlost Brownova pohybu je umerna teplote systemu.  \\
+\cor{...}{
+  \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+    \setItemnumber{3}
+    \item \label{n:3}{Castice na sebe pusobi silami elektromagneticke povahy - pritazlive, odpudive}
+  \end{enumerate}
+}
+
+\begin{wrapfigure}[7]{r}{0.4\textwidth}
+  \includegraphics[width=0.4\textwidth]{kinetic_theory.png}
+\end{wrapfigure} 
+vzajemne silove pusobeni mezi dvema casticemi v zavislosti na vzdalenosti mezi nimi  \\[10pt]
+  $\bullet$ \textbf{sfera vzajemneho pusobeni} : kazda castice je pritahovana jen nejblizsimi casticemi ve svem okoli \\
+  $\bullet$ \textbf{vazebne sily}  sily jimiz na sebe pusobi atomy v molekule \\
+  $\bullet$ kvuli silovym pusobenim mezi casticemi ma teleso i vnitrnipotencialni energii\\
+  $\bullet$ $r_0$ : rownovazna poloha, nepusobi sila \\
+  \vspace{2cm}
+  
+  \textbf{Stavove veliciny} : veliciny, ktere popisuji stav termodynamickeho systemu. Deli se na: \\
+  \textbf{extenzivni} : zavisi na velikosti systemu \\
+    Objem ,
+    Hmotnost , 
+    Latkove mnozstvi ,
+    Vnitrni energie, entalpie, dalsi termodynamicke potencialy , 
+    Entropie \\
+  
+  \textbf{intenzivni}: jsou na velikosti systemu nezavisle \\
+    Tlak ,
+    Teplota ,
+    Hustota \\ 
+
+  \cor{Molarni Veliciny}{
+    \textbf{atomova hmotnostni jednotka} : $\frac{1}{12}$ hmotnosti atomu uhliku nuklidu $C^{12}$ $m_u = 1.66*10^{-27} $ [kg] \\
+    \textbf{Relativni aromova hmotnost $A_r$} - udava kolikrat je atom tezsi,
+    $m=A_rm_u$ \\[10pt]
+    \textbf{Avogadrova konstanta} - pocet castic v jednom molu
+    $N_A=6.02*10^{23} $ $[mol^{-1}]$ \\
+    \textbf{Latkove Mnozstvi $n$} - vyjadruje pocet castic v telese v molech 
+    $N=N_A*n$ \\[10pt]
+    \textbf{Molarni hmotnost $M_m$} : hmotnost 1 molu latky 
+    $m=M_mn$ [$kg/mol$] \\
+    \textbf{Molarni objem $V_m$} : objem 1 molu latky 
+    $V=V_mn$ [$m^3/mol$]\\ 
+    \textbf{molarni objem plynu} za normalnich podminek, tzn $V_m=22,414$ [$l$]
+    $1,66*10^{-27}*6.02*10^{23}=10^{-3}$ \hspace{2cm} ... nahoda? ne, picus chemik prohlasil gram za hlavni jednotku \\
+  }
+  \textbf{Chemicka vazba} : spojeni mezi atomy s nestabilni elektronovou konfiguraci => tvori molekuly
+  \textbf{krystalova mrizka} : mnozina urcitych abstraktnich bodu, podle nichz se popisuje struktura krystalu
+  \cor{Vnitrni energie}{soucet vsech kinetickych a potencialnich energie\\}
+\cor{Teplo}{energie, kterou pri tepelne vymene preda teleso s vyssi teplotou \\[5pt]
+  $Q=mc \Delta t$ [$J$]\\[5pt]
+  \textbf{merna tepelna kapcita $c$} [$J/kgK$]
+}
+\textbf{Rovnovazny stav soustavy} : každá soustava, která je od určitého okamžiku v neměnných vnějších podmínkách, přejde samovolně po určité době do rovnovážného stavu a samovolně z něho nevyjde.\\
+\textbf{Rovnovážný děj} je děj, při kterém soustava prochází řadou na sebe navazujících rovnovážných stavů. Reálné děje lze považovat za rovnovážné, probíhají-li dostatečně pomalu.
+\ex{}{
+Když píst s plynem rychle stlačíme, potřebuje plyn na dosažení rovnováhy určitý čas
+(molekuly na druhé straně neví, že píst je stlačován, dokud k nim nedorazí vytlačené
+molekuly => chvíli trvá než se vytlačené molekuly rozmístí po pístu a vyrovná se tlak a
+teplota v celém objemu).
+Stlačujeme pomaleji: vytlačených molekul je méně, rozdíly v tlaku jsou menší => pokud
+budeme píst stlačovat dostatečně pomalu, bude mít teplota i tlak dost času na vyrovnání
+v celém objemu => v každém okamžiku se plyn bude chovat, jako kdyby byl v rovnovážné
+poloze => rovnovážný děj. 
+}
+\textbf{Modely jednotlivych skupenstvi} 
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item \textbf{pevne latky} castice blizko u seb, pravidelne usporadany 
+  \item \textbf{kapaliny} castice dal od sebe  
+  \item \textbf{plyny} castice nejdal od sebe  
+\end{enumerate}
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
