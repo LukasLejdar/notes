@@ -541,9 +541,67 @@ f jsou "stupne volnosti" castice. Pro jednoatomove molekuly $f=3$, pro dvouatomo
 krystalické, model krystalové mřížky, poruchy v krystalové mřížce, deformace,
 normálové napětí, relativní prodloužení, Hookův zákon, křivka deformace, teplotní
 roztažnost.}
+castice jsou v pevnych latkach pravidelne usporadany, delime je na 
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item amorfni zvykacky, plasty
+  \item krystalicke nerosty, kovy
+\end{enumerate}
 \textbf{krystalicka mrizka} : sablona pro umisteni atomu. Nutne nemusi byt vsechny mista obsazeny\\
+\textbf{idealni krystalova mrizka} je takova, ze v kazdem uzlovem bode se nacazi castice tzn nema poruchy \\
+mrizku ziskame posouvanim \textbf{Elementarni bunky} podel prodlouzenych hran. Elementarnich bunek je mnoho \\
+
+\begin{center}
+  \includegraphics[width=\linewidth]{images/bunky.png}
+\end{center}
+
+\textbf{Vazby mezi atomy} : kovalentni, iontova, kovova, vodikova \ldots
+\textbf{Poruchy krystalicke mrizky} 
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item Bodove
+    \begin{center}
+      \includegraphics[width=0.6\linewidth]{images/bodove.png}
+    \end{center}%
+  \item Dislokace
+    \begin{center}
+      \includegraphics[width=0.6\linewidth]{images/dislokace.png}
+    \end{center}%
+  \item Objemove v krystalu je kus vytrznickeho materialu
+\end{enumerate}
+\textbf{Mechanika deformace pevnych latek}
+$\iff$
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item \textbf{Elasticka} : pruzna, vratna
+  \item \textbf{Plasticka}  : tvarna, nevratna
+  \item \textbf{deformace} tahem, tlakem, ohybem, smykem, kroucenim
+\end{enumerate}
 
 
+\cor{normalove napeti}{
+\begin{wrapfigure}[10]{L}{6cm}
+  \vspace{-0.5cm}
+  \includegraphics[width=5cm]{images/normalove_napeti.png}
+\end{wrapfigure}%
+.\\
+$\sigma_n=\frac{F_p}{S}$ $[Pa]$ \\[10pt]
+\text{kde $F_p$ je velikost síly působící kolmo na plochu příčného řezu}\\ {o obsahu S} \\
+}
+\cor{Relativni prodlouzeni}{
+$\epsilon=\frac{\Delta l}{l_0}$
+}
+\cor{Hookuv zakon}{ 
+  Pro pruznou deformaci tahem je normalove napeti primo umerne relativnimu prodlouzeni \\[5pt]
+$\sigma_n=E\epsilon$
+}
+\cor{teplotni roztaznost}{
+  $\epsilon=\alpha \Delta T$ \\
+  $\alpha$ teplotni soucinitel delkove roztazosti \\
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item \textbf{delkova} $l=l_0(1+\alpha \Delta T)$
+  \item \textbf{plosna} $S=(l_0(1+\alpha \Delta T))^2$
+  \item \textbf{objemova} $V=(l_0(1+\alpha \Delta T))^3$
+\end{enumerate}
+
+}
 
 \newpage
 
@@ -554,6 +612,54 @@ roztažnost.}
 \section{Struktura a vlastnosti kapalin}
 \dfn{}{Povrchová vrstva kapalin, povrchová energie, povrchové napětí, povrchová síla, jevy na
 rozhraní, kapilární tlak, kapilární jevy, teplotní roztažnost kapalin.}
+\vspace{0.5cm}
+\textbf{Vlastnosti kapalin} : podobne strukture amorfnich latek. Usporadani molekul je jen kratkodosahove. Molekuly neusporadane kmitaji kolem roznovaznych poloh. Zvysovanim teploty dochazi ke zmenseni teto doby, coz se projevi i na tekutosti kapaliny. Neustale se vyparuje. \\
+
+\begin{wrapfigure}[8]{R}{8cm}
+  \vspace{-10pt}
+  \includegraphics[width=\linewidth]{images/povrchova_vrstva.jpg}
+\end{wrapfigure}%
+. \\
+\textbf{Povrchova vrstva} \\
+ruzne molekuly na sebe vzajemne pusobi ruzne pritazlivymi silami. Napr molekula vody se s molekulou vody pritahuje vice, nez s molekulami vzduchu. Tudiz na molekuly povrchu kapaliny pusobi celkova sila dolu coz zapricinuje povrchove napeti. V pripade molekul nadoby to, ale muze byt naopak. Molekula vody se s molekulou nadoby pritahuje vice $\implies$ konkavni tvar.
+\vspace{30pt}
+\begin{figure}[!h]%
+  \centering
+  \includegraphics[width=7cm]{images/surface_tention.jpg}
+  \quad
+  \hspace{30pt}
+  \includegraphics[width=4cm]{images/popoo_surface_tention.png}
+\end{figure}
+
+\cor{povrchove napeti, neboli energie}{
+  povrchove napeti je enrgie povrchu kapaliny na  $[\frac{J}{m^2}]=[\frac{N}{m}]$ \\
+  $\sigma=\frac{F}{l}$
+}
+\begin{center}
+  \includegraphics[width=0.5\linewidth]{images/kapilara.png}
+\end{center}
+\cor{Kapilarni jevy}{
+  zakrivenim povrchu kapalin pri stenach nadoby v kapilarach u kapek a bublin zpusobuje vznik pridavneho tlaku v kapaline. Tento tlak se nazyva kapilarni tlak. \\[5pt]
+  $p_k=\frac{F}{S}=\frac{\sigma l}{\pi R^2}=\frac{\sigma 2\pi R}{\pi R^2}=\frac{2\sigma}{R}$ \\[5pt]
+kapilarni tlak pro bublinu : $P_1$ \ldots tlak uvnitr bubliny $p_2$ \ldots okolni tlak  \\[10pt]
+\begin{flalign*}
+  F_{P2}&=F_{\sigma} + F_{P1} &\\
+  P_2 4\pi r^2 &= 2 \sigma 2 \pi r + P_1 4\pi r^2 &\\
+  \Delta P &= \frac{4\sigma}{R} &
+\end{flalign*}
+}
+
+nebot tlak v kazde vysce v kapaline musi byt stejny
+\frm{
+  \begin{flalign*}
+    h \rho g &= \frac{2\sigma}{R} &\\[5pt]
+    h &= \frac{2\sigma}{R \rho g} &
+  \end{flalign*}
+}
+\textbf{Objemova roztaznost kapalin}
+\frm{$V=V_0(1+\beta \Delta T)$}
+
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
