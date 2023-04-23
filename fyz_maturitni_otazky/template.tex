@@ -237,7 +237,6 @@ $\frac{\diff L}{\diff t} = r \times f$
 \end{align*}
 }
 \cor{Moment setrvacnosti}{$L_i=I_{ij}w_j$ \hspace{10cm}... ekvivalentni s $p=mv$}
-
 \textbf{Kineticka energie}
 \frm{
   $\diff E_k = \frac{1}{2}\diff m v^2=\frac{1}{2} \diff m |w \times r|^2$ \\[10pt]
@@ -718,11 +717,6 @@ m \ldots hmotnost vodni pary V \ldots objem vzduchu
   $\phi=\frac{P}{P_s}$ \\[10pt]
   P \ldots tlak vodni pary, $P_s$ \ldots tlak syte vodni pary pri dane teplote.
 }
-
-
-
-
-
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -735,6 +729,62 @@ rychlost, zrychlení, fáze, frekvence, perioda), skládání kmitů v jedné p�
 kmitů navzájem kolmých, Lissajousovy obrazce, dynamika harmonického pohybu,
 pružina, kyvadlo, přeměny energie v oscilátorech, tlumené kmity, nucené kmity,
 rezonance.}
+\vspace{0.5cm}
+\textbf{Periodicky pohyb} : dej, ktery se s pravidelnymi intervaly opakuje \\
+\textbf{Perioda} : doba jednoho opakovani \\
+\cor{Frekvence}{$f=\frac{1}{T}$ $[Hz]$} \\
+\textbf{Kinematika harmonickeho kmitani} : zkouma periodicky pohyb
+\cor{Harmonicke kmitani}{
+\begin{wrapfigure}[10]{L}{5cm}
+  \includegraphics[width=\linewidth]{images/harmonic_oscilator.png}
+\end{wrapfigure}%
+\ \\
+\ \\
+pro linearni harmonicky oscilator plati \\[10pt]
+$F=-ky$ \\
+$\ddot y = -\frac{k}{m}y$ \\[10pt]
+jejiz obecnym resenim je \\[10pt]
+$y=C_1\cos (wt) + C_2\sin(wt)$\\[10pt]
+$y=y_0\cos (wt) + \frac{v_0}{w}\sin(wt)$ \\[10pt]
+$y=\sqrt{y_0^2+(\frac{v_0}{w})^2}\sin(wt+\theta)$ \\[10pt]
+,kde $w=\sqrt{\frac{k}{m}}$
+}
+
+\frm{$2\pi = wT$ \\ 
+$T=\sqrt{\frac{m}{k}}2 \pi $
+}
+
+\frm{$E_p=\int F \diff y=\int -ky \diff y = -\frac{1}{2}ky^2$}
+
+\frm{$E_k=\frac{1}{2}mv^2$}
+
+\frm{$E=E_p+E_k=\frac{1}{2}ky_{max}^2=$ const.}
+
+\textbf{Rovnovazna poloha} pozice, kdy pusobi nulova rovnovazna sila \\
+\textbf{Krajni poloha} : poloha, kde je nejvetsi potencialni energie \\ 
+\textbf{Slozene kmitani} vznikne skladanim nekolika kmitavych pohybu
+
+\cor{Tlumene kmitani}{
+\begin{flalign*}
+  & \ddot y = -\frac{k}{m}y-\frac{c}{m}\dot y && \\
+  & y = Ae^{-\frac{c}{2m}t}\cos(\sqrt{\frac{k}{m}t}) &&& \text{\ldots pro $v_0=0$ a $y_0=y_{max}$} && \\
+\end{flalign*}
+}
+\textbf{nucene kmity} : na konci kazde periody kompenzujeme ztraty energie vznikle tlumenim kmitaveho pohybu \\
+\textbf{Rezonance} amplituda vychylky nucenych kmitu dosahne maximalni hodnoty pri frekvenci, ktera je shodna s frekvenci vlastniho kmitani oscilatoru
+\frm{
+\begin{wrapfigure}[10]{L}{5.7cm}
+  \vspace{-7pt}
+  \includegraphics[width=5cm]{images/pendulum.png}
+\end{wrapfigure}%
+\ \\[10pt]
+\begin{flalign*}
+  & \ddot x=L \ddot\theta=-g\sin \theta &&\\
+  & \ddot \theta = -\frac{L}{g}\sin(\theta) && \\
+  & \sin \theta \dot = \theta &&& \text{\ldots pro $\theta < 5^\circ $} && \\
+  & \ddot \theta = -\frac{L}{g}\theta &&& \implies w^2=\frac{L}{g}&& \\[7pt]
+\end{flalign*}
+}
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
