@@ -703,7 +703,7 @@ krivka syte pary je pouze cast fazoveho diagramu \\[10pt]
   \item krivka sublimace
   \item krivka syte pary
 \end{enumerate}
-\ \\
+
 \textbf{Trojny bod} : kapalne, plynne i pevne skupenstvi koexistuje za daneho tlaku a teploty \\
 
 \vspace{20pt}
@@ -732,7 +732,7 @@ rezonance.}
 \vspace{0.5cm}
 \textbf{Periodicky pohyb} : dej, ktery se s pravidelnymi intervaly opakuje \\
 \textbf{Perioda} : doba jednoho opakovani \\
-\cor{Frekvence}{$f=\frac{1}{T}$ $[Hz]$} \\
+\cor{Frekvence}{$f=\frac{1}{T}$ $[Hz]$}
 \textbf{Kinematika harmonickeho kmitani} : zkouma periodicky pohyb
 \cor{Harmonicke kmitani}{
 \begin{wrapfigure}[10]{L}{5cm}
@@ -745,9 +745,9 @@ $F=-ky$ \\
 $\ddot y = -\frac{k}{m}y$ \\[10pt]
 jejiz obecnym resenim je \\[10pt]
 $y=C_1\cos (wt) + C_2\sin(wt)$\\[10pt]
+,kde $w=\sqrt{\frac{k}{m}}$ \\[10pt]
 $y=y_0\cos (wt) + \frac{v_0}{w}\sin(wt)$ \\[10pt]
-$y=\sqrt{y_0^2+(\frac{v_0}{w})^2}\sin(wt+\theta)$ \\[10pt]
-,kde $w=\sqrt{\frac{k}{m}}$
+$y=\sqrt{y_0^2+(\frac{v_0}{w})^2}\sin(wt+\theta)$
 }
 
 \frm{$2\pi = wT$ \\ 
@@ -796,6 +796,60 @@ $T=\sqrt{\frac{m}{k}}2 \pi $
 (fázová rychlost), vlnová délka, rovnice postupné vlny, interference vlnění, koherentní
 vlnění, odraz vlnění, Huygensův princip, zákon odrazu s lomu, ohyb vlnění, zvuk,
 Dopplerův jev, souvislosti s optikou.}
+\vspace{0.5cm}
+\textbf{Mechanicke vlneni} : dej, pri kterem se kmitovay vzruch siri prostredim \\
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item \textbf{Postupne vlneni} energie se vlnenim prenasi \\
+    vsechny body kmitaji se stejnou amplitudou, ale ruznou fazi
+
+    \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+      \item \textbf{Postupne Pricne vlneni} castice kmitaji ve smeru kolmem ke smeru sireni vlneni napr vodni hladina
+      \item \textbf{Postupne podelne vlneni} castice kmitaji ve smeru sireni vlneni napr. zvuk
+    \end{enumerate}
+
+  \item \textbf{Stojate vlneni} energie se neprenasi \\
+    vsechny body kmitaji se stejnou fazi, ale ruznou amplitudou
+\end{enumerate}
+
+\cor{vlnova delka}{vzdalenost dvou nejblizsich bodu, ktere kmitaji se stejnou fazi \\
+$\lambda = vT$
+}
+\mprop{Rovnice Postupne mechanicke vlny}{
+  \vspace{-20pt}
+  \begin{flalign*}
+    y  &= y_m \sin (wt) & \\
+       &= y_m \sin (w(t-t')) & \\
+       &= y_m \sin \frac{2\pi}{T}(t-\frac{x}{v}) & \\
+       &= y_m \sin 2\pi (\frac{t}{T}-\frac{x}{vT}) & \\
+       &= y_m \sin 2\pi (\frac{t}{T}-\frac{x}{\lambda}) &&
+  \end{flalign*}
+}
+\textbf{Interference vlneni} : v mistech kudy zaroveni postupuje vice vlneni dochazi k interferenci.\\
+V pripade, harmonickych pohybu ve stejnem smeru, odchylky sectu \\
+\cor{Drahovy rozdil interferujicich vlneni}{
+  $d=x_1-x_2$
+}
+\cor{fazovy rozdil interferujicich vlneni}{
+\vspace{-20pt}
+\begin{flalign*}
+  \Delta \phi &= \phi_2 - \phi_1 & \\
+              &= 2\pi(\frac{t}{T}-\frac{x_2}{\lambda}) - 2\pi(\frac{t}{T}-\frac{x_1}{\lambda}) & \\
+              &= \frac{2\pi}{\lambda}(x_2-x_1)
+\end{flalign*}
+}
+\newpage
+\begin{wrapfigure}[8]{L}{8cm}
+  \includegraphics[width=8cm]{images/vlnoplocha.png}
+  \smallskip\par
+  \includegraphics[width=5cm]{images/huygens.jpeg}
+\end{wrapfigure}%
+\textbf{Izotropni prostredi} : ma ve vsech smerech stejne fyzikalni vlastnosti \\ 
+\textbf{vlnoplocha} : mnozina bodu do nichz se vlneni dostane z bodoveho zdroje za stejny casovy interval \\
+\textbf{paprsek} : kolmice k tecne vlnoplochy
+\ \\[40pt]
+\textbf{Huygensuv princip} : kazdy bod vlnoplochy do nehoz se dostalo vlneni v jistem okamziku muzeme pokladat za zdroj elementarniho vlneni \\
+
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -829,6 +883,54 @@ zdroje, Kirchhoffovy zákony, výkon elektrického proudu.}
 \dfn{}{Polovodiče vlastní, příměsové, typ N, typ P, přechod PN, diodový jev, dioda jako
 usměrňovač, Graetzovo zapojení, tranzistorový jev, tranzistor jako zesilovač, termistory,
 diody LED, fotodiody.}
+\vspace{0.5cm}
+Pri teplote 0 K, se vsechny elektrony nachazeji v nejnizsich energetickych hladinach, tzn tak jak se to vyucuje v chemii. Pri jakemkoli zvyseni teploty se ale cast tepelne energie prenese na elektrony, ktere muzou preskakovat do vyssich neobaszenych energetickych hladin. Od urcite energeticke hladiny ma elektron dost energie na to, aby se vyvazal z atomu a zacal se volne pohybovat latkou
+
+\begin{center}
+  \includegraphics[width=\linewidth]{images/energeticke_hladiny.png}
+\end{center}
+
+Vodic je potom takova latka, u ktere se hladina dostatecna k vyvazani prekryva s tou valencni\ldots
+
+\cor{vlastni polovodic}{
+  \ \\
+  \centering
+  \includegraphics[height=5cm]{images/energie_elektronu.png}
+  \quad
+  \hspace{30pt}
+  \includegraphics[height=5cm]{images/vlastni_polovodic.png}
+  \ \\
+  \vspace{0.5cm}\raggedright
+  Vlastni polovodic je takova latka, ktera se sklada ciste z krystalicke mrizky jednoho atomu, a to takoveho, kteremu je potreba dodat malou, ale presto vyznamnou energii, aby se alespon jeden elektron z jeho obalu uvolnil. \\
+  Takova latka tedy vede el. proud, ale ma velky odpor.
+}
+ 
+\textbf{Fortorezistor} : meni svuj odpor na zaklade energie prijimane zarenim. \\
+\textbf{termorezistor} : meni svuj odpor na zaklade tepelne energie \\
+
+\cor{Nevlastni polovodic}{
+  \begin{wrapfigure}[20]{L}{5.7cm}
+    \includegraphics[width=5cm]{images/nevlastni_polovodice.png}
+  \end{wrapfigure}%
+  Nevlastni polovodic ma navic v malem mnozstvi primiseny nejaky jiny atom, ktery je
+  \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+    \item z 13. skupiny > polovodic typu P
+    \item z 15. skupiny > polovodic typu N
+  \end{enumerate}
+
+  Primesy typu N tedy maji jeden elktron navic oprati atomum kremiku a zaroven maji jako jedine tu specialni vlastnost, ze tento elektron ma energii velmi blizkou k te potrebe kvyvazani z atomu.
+  Takova latka ma tedy lepsi vodivost, protoze v elektrostaticky neutralnim stavu ma mnoho volnych elektronu. Pokud by tyto elektrony byli odvedeny pryc, faze by se stala kladnou a tudiz by elektrony pritahovala. Pri prvni prilezitosti by si svoje ztracene elktrony opet pritahla zpet. \\
+  Primesy typu P funguji opacne. Atomy z 13. skupiny maji energii prazdneho 4. elektronu velmi blizko valencni vrstve. Elktron, ktery by tuto pozici obsadil, by v ni byl relativne stabilni a nevyvazovl se.Vysledkem je ze polovodic typu P ma mnohem vic "der" ve valencni vrstve. Tyto diry se z pohledu proudu chovaji jako kladne nabite castice. 
+}
+
+\textbf{PN-prechod} : vznik hradlove vrstvy. Diffuzni i "drift" proudy jsou stejne. Vznikne napeti mezi mezipolovodici (asi 0.7 V). "Reverse biasing" zvysovani napeti, zmensovani diffusniho proudu => proud netece. "Forward Biasing" zmensovani napeti, zvysovani diffusniho proudu => proud tece zvysuje se nelinearne (vypada jako exponenciala) po prekonani napeti se chova vpodstate jako vodic bez odporu. "Drift" proud je zavisly pouze na teplote. 
+
+\textbf{Transistor} : prostredni P, nebo N vrstava musi byt velmi tenka 
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item \textbf{PNP} 
+    \item \textbf{NPN} Realna soucastka je jednosmerna. Schemtaicky to ukazuje sipka. Kdyz v tomto smeru zapojime napeti, proud nepotece. Prechod NP je "Reverse biased". Ale jen malo. Vetsina napeti se ztrati na "forward biased" PN prechodu. Pripojenim maleho napeti na bazy se vyrovna  napeti na NP prechodu a proud muze tect. Je primo umerny, ale nekolika nasobne vetsi nez proud na bazi. => zesilovac
+\end{enumerate}
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -840,6 +942,37 @@ diody LED, fotodiody.}
 zákony elektrolýzy, galvanické články, elektrolytická polarizace, akumulátory, ionizace,
 nesamostatný a samostatný výboj, voltampérová charakteristika výboje, doutnavý výboj,
 jiskra, oblouk, katodové záření, elektronový paprsek, emise elektronů.}
+
+\vspace{0.5cm}
+\textbf{Elektrolyticka disociace} : rozlozeni latky na ionty. Kationy, aniony \\
+\textbf{elektrolyty} : kapaliny, ktere vedou el. proud \\
+\textbf{Elektrody} vytvori v kapaline el. pole => ionty se zacnou pohybovat => tece proud \\
+ionty odevzdaji/prijmou elektron. Mohou reagovat s elektrodou, nebo elektrolytem => elektrolyza \\
+$U_r$ $\ldots$ rozkladne napeti \\
+\frm{$I= \frac{U-U_r}{R}$}
+
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item \textbf{I. Faradayuv zakon} Hmotnost vyloucene latky he primo umerna naboji Q, ktery prosel elektrolytem
+  \item \textbf{II. faradayuv zakon} Látková množství vyloučená stejným nábojem jsou pro všechny látky chemicky ekvivalentní, neboli elektrochemický ekvivalent A závisí přímo úměrně na molární hmotnosti látky.
+\end{enumerate}
+
+\textbf{Galvanicky clanek} je chemicky zdroj elektrickeho napeti vyuzivajici ionizaci
+\textbf{Elektricka polarizace}  jev, při kterém se působením elektrického pole z neutrálních atomů a molekul stanou elektrické dipóly. Prochazi li elektrolytem proud meni se v dusledku elektrolyzy povrchy elektrod. Povrch elektrod se pokryva vyloucenymi produkty. vznikaji nove dvojvrstvy, Elektrody se polarizuji.  \\
+\textbf{Akumulatory} lze znovu nabijet stejnosmernym el. proudem. Odstraneni zmen ke kterym doslo pri vybiti. nejbeznejsi : Oloveny. \\
+
+\textbf{Plyny} \\
+
+\textbf{ionizace} : z neutralnich atomu ionty \\
+z molekuly se uvolnuji elektrony zanechavajici za sebou kation. \\
+\textbf{Elektricky vyboj v plynu} : el. proud v ionizovanem plynu \\
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item  \textbf{Nesamostatny naboj} probiha pouze za pritomnosti ionizatoru
+  \item  \textbf{samostatny vyboj} probiha i po odstraneni ionizatoru. ionty jsou tak rychle, ze se sami stavaji ionizacnim cinidlem ionizace. 
+\end{enumerate}
+
+\textbf{plazma} : vysoce ionizovany plyn pri samostatnem vyboji \\
+\textbf{obloukovy vyboj} : zkrat mezi elektrodami => zahrati na 4500 C $\deg$. Po oddaleni stale vede proud kvuli ionizaci tepltem \\
+\textbf{jiskrovy vyboj} intenzita el. pole dosahne hodnoty potrebne k ionizaci. Zdroj se vybojem rychle vybije. \\
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -893,6 +1026,68 @@ modulace, rozhlas, televize), spektrum elektromagnetického vlnění.}
 \dfn{}{Šíření světla, optické prostředí, [Fermatův princip], zákon odrazu a lomu světla, rozklad
 (disperze) světla, optická soustava, zrcadla, čočky, zobrazovací rovnice, příčné zvětšení,
 oko, optické přístroje.}
+
+\vspace{0.5cm}
+
+\textbf{Optika je nauka o svetle} \\
+zabyva se zkoumanim podstaty svetla a zakonitostmi svetelnych jevu \\ 
+
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item Optika geometricka zanedbavame vlnovou povahu svetla. Svetlo povazujeme za paprsek
+  \item Optika vlnova svetlo povazujeme za vlnu
+  \item Optika kvantova 
+\end{enumerate}
+
+\cor{Zakony geometrickeho sireni svetla}{
+  \begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+    \item zakon primocareho sireni svetla v opticky stejnorodem prostredi
+    \item zakon odrazu : svetlo se odrazi pod stejnym uhlem pod kterym doapdlo
+    \item zakon lomu 
+  \end{enumerate}
+}
+svetlo se v ruznych prostredich pohybuje ruzne rychle. Definujeme velicinu lom svetla, tak aby: \\
+\cor{index lomu}{
+ $n=\frac{c}{v}$ 
+}
+
+\cor{Fermatuv princip}{
+  Světlo se mezi dvěma body šíří po takové dráze, aby ji urazilo za nejkratší dobu
+}
+
+\begin{center}
+  \includegraphics[width=0.4\linewidth]{images/Snells_law.png}
+\end{center}
+
+\cor{Sneluv zakon odrazu svetla}{
+$T=\frac{\sqrt{x^2+a^2}}{v_1}+\frac{\sqrt{(l-x)^2+b^2}}{v_2}$ \\
+$\frac{dT}{dx}=0$ \\
+$\frac{\sin \alpha}{v_1}-\frac{\sin\alpha}{v_2}=0$ \\
+$\frac{\sin \alpha}{\sin \beta}=\frac{v_1}{v_2}=\frac{n_2}{n_1}$
+}
+
+\textbf{Disperze svetla} : Pri prechodu z jednoho prostredi do druheho se nemeni f \\
+$v=\lambda f$ \\
+$n = \frac{c}{\lambda f}$ \\
+$n\lambda = \frac{c}{f}$ $\ldots$ konstantni \\
+pro ruzne vlnove delky svtela => ruzne n => ruzne uhly odrazu \\
+
+
+\textbf{Zobrazovani optickymi soustavami} \\
+z kazdeho bodu predmetu vychazeji svetelne paprsky \\
+\textbf{opticka soustava} : usporadani optickych prostredi, ktere meni smer paprsku \\
+
+\textbf{Vypoukle/Dute parabolicke zrcadlo} : paprsky rovnobezne se zrcadlovou osou se odrazi do oniska \\
+
+:
+
+
+%optika se zabyva pouze zarenim o vlnove delce $10^{-8}$ -  $10^{-4}$ m \\
+%$10^{-4}$ - vetsi vlnovedelky by mohly byt ovlivneny rozmery mericich pristroju \\
+%$10^{-8}$ - vzdalenost atomu a molekul ($10^{-9}$) by nehomogene ovlinili svetelne paprsky\\ 
+
+
+
+\textbf{okem pozorovatelne vlnove delky} : $380-750$  $10^{-9}m$
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -924,6 +1119,16 @@ kvantum energie, spektrum elektromagnetického záření (UV, RTG, $\gamma$)}
 postuláty, Lorentzova transformace, relativnost současnosti, dilatace času, kontrakce
 délek, skládání rovnoběžných rychlostí, relativistická hmotnost, relativistická hybnost,
 relativistická energie (E=mc2).}
+
+\vspace{0.5cm}
+teorie, kterou formuloval Einstein na zacatku 20. stol \\
+navazal Obecnou teorii \\
+je o zakonech pohybu \\
+navazuje na Newtnovu - stavajici nejlepsi teorii \\
+x objevuji se v ni trhliny, zvlast pri vyssich ryuchlostech \\
+rychlost svetla je konstantni \\
+Einsteinovi postulaty => Lorentzovi trasnformace \\
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -935,6 +1140,57 @@ relativistická energie (E=mc2).}
 jev, vlnové vlastnosti částic (de Broglieovy vlny), korposkulárně vlnový dualismus,
 Davisson-Germerův pokus, [Schrödingerova rovnice], Heisenbergovy relace neurčitosti,
 kvantování fyzikálních veličin, princip korespondence.}
+
+\vspace{0.5cm}
+\textbf{cerne teleso} : pohlti veskere svetlo, ktere na nej dopadne, je absolutne nereflexivni. => vsechno svetlo vychazejici z thoto telesa je jim vyzarene. \\
+Graf elektromagneticke radiace (mnozstvi v zavislosti na vlnove delce) pro teleso v termodynamickem equilibriu zavysi pouze na jeho teplote\\
+je potreba asi 500 C, aby teleso zacalo vyzarovat ve viditelnem spektru \\
+Pri 5000 C je vetsina vyzareneho svetla ve viditelnem spektru => teplota slunce.
+
+\begin{center}
+  \includegraphics[width=0.4\linewidth]{images/spektrum_radiace.png}
+\end{center}
+
+klasicky elektromagnetismus tento graf nedokaze popsat. Dobre vystihuje pravou cast grafu, ale nedokaze predpovedet pokles pro mensi vlnove delky. \\
+Predpovidal nekonecny rust grafu z leva \\
+=> UltraFialova katastrofa \\
+=> Klasicky elektromagnetismus je neuplny. \\
+V momentu zoufalstvi napadla Maxe Plancka nasledujici myslenka : Vyzarene svetlo je zpusobene vibracemi castic v latce, jejichz rychlost je take zavisla pouze na teplote. Svetlo vyzarene timto zpusobem musi byt kvantizovane. Nabyva pouze urcitych diskretnich hodnot. \\
+\cor{Energie fotonu vyzarenych cernym telesem}{
+  $E=nhf_0$ \\
+  $h=6.626*10^{-34}$ : experimentalne namerena hodnota
+}
+Plankova konstanta je velice mala => energie je velmi plynule kvantizovana => proto si toho nikdo do te doby nevsimnul \\
+
+\textbf{Fotoelektricky jev} : jev pri kterem jsou elektrony uvolnovany z obalu atomu a nasledne mohou byt emitovany z latky v dusledku absorbce elektromagnetickeho zareni \\
+Z latky odletaji el. => latka se nabiji kladne \\
+Bylo zjisteno, ze schopnost fotonu vyvazat elektron zavisi pouze na jeho frekvenci a vubec na intenzite. \\
+Pokud dodam nedostatecnou frekvenci => zadny elektron se neuvolni \\
+Tuto zahadu vyresil Albert Einstein. Svetlo je Kvantizovane na fotony jejihz energie je 
+\frm{
+$hf=W_A+E_k$ \\
+$hf=hf_0+\frac{1}{2}mv^2$ \\
+$W_A$ $\ldots$ prace potrebna ka vyvazani el
+$E_k$  $\ldots$ kineticka energie el
+$f_0$  $\ldots$ minimalni frekvence fotonu potrebna k vyvazani el
+}
+Foton musi mit nejakou minimalni energii k vyvazani elektronu \\
+x Svetlo musi byt popsatelne zaroven jako vlna : dvojdira experminet  \\
+
+
+\textbf{L. de Broglie} vyslovil predpoklad, ze i vsechny ostatni castice maji charakter vlny \\
+
+\frm{
+$\lambda = \frac{c}{f}=\frac{c}{\frac{cp}{h}}=\frac{h}{p}=\frac{h}{mv}$ 
+}
+toto vlneni jakekoliv hmoty je oznacovano jako de Broglieovy vlny.
+
+\cor{relativisticka hmotnost fotonu}{
+$m=\frac{E}{c^2}$
+$p=\frac{E}{c^2}c=\frac{hf}{c}=$
+}
+
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -945,6 +1201,37 @@ kvantování fyzikálních veličin, princip korespondence.}
 \dfn{}{Modely atomu, spektrum vodíku, Franck-Hertzovy pokusy, kvantově mechanický model
 atomu vodíku, kvantová čísla, orbitaly, spin, Pauliho princip, elektronová konfigurace,
 periodická soustava prvků, emise světla, laser.}
+
+\vspace{0.5cm}
+\textbf{atom} - od antiky nejmensi nedelitelna castice latky \\
+x je delitelny \\
+\textbf{pudinkovy model} : atom je nepatrna koule, ktera nese kladny naboj. el. se v ni volne 
+pohybuji \\
+\textbf{planetarni model} \\
+Ernest Rutherford rozlisil 2 castice vyletujici z jadra. \\
+B - odpovida el. ($He^{4}_2$) a - velmi tezky, kladne nabity \\
+pomoci zareni zkoumal nitro atomu \\
+Prisel s teorii ze, el. obyhaji kolem kladne nabiteho jadra. V nem jsou jeste navic velmi hmotne neutrony. \\
+\textbf{Bohruv model} \\
+energie el. v atomu je kvantizovana. El. nemuze spadnout do jadra, protoze by pri tom musel uvolnit zakazane mnozstvi energie. El. muzou pri vyzareni, nebo pohlceni energie volne prechazet z jedne en. vrstvy do druhe \\
+dokazal vysvetlit spektralni cary, a periodickou tabluku prvku \\
+postupne se zavedly 4 kvantova cisla \\
+\textbf{hlavni} : n - udava vrstvu. Energie el. roste z n \\
+\textbf{vedlejsi} : l <0;n-1> udava tvar orbitalu \\
+\textbf{magneticke} : m : <-l;l> - vyjadruje prostorovou orientaci orbitalu. Udava pocet orbitalu v pod slupce. \\
+\textbf{spinove} s : $\mp \frac{1}{2}$ udava spin v orbitalu. El. s opacnym spinem se pritahuji \\
+
+\textbf{Spektralni cary} : rozlozime-li slunecni svetlo pomoci dokonalejsiho spektrometru, najdeme ostre tmave cary. (Slunce neni dokonale cerne teleso) \\
+Tyto tzv. absorbcni cary vznikaji pohlcenim danych vlnovych delek ve vodikove atmosfere Slunce \\
+\cor{Balmeruv-Rydberguv vztah}{
+  $\frac{1}{\lambda} = R_H(\frac{1}{m^2}-\frac{1}{n^2})$
+}
+\frm{
+$E_n=- \frac{hcR_H}{n^{2}}$
+}
+
+
+
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -956,6 +1243,66 @@ periodická soustava prvků, emise světla, laser.}
 nukleon na nukleonovém čísle, hmotnostní úbytek, radioaktivita, zákon radioaktivní
 přeměny (rozpadu), poločas rozpadu, rozpadové řady, umělá radioaktivita, jaderné reakce,
 jaderná energetika, detektory částic, urychlovače částic.}
+\vspace{0.5cm}
+zabyva se slozenim a strukturou jader atomu a zakonitostmi jadernych deju. \\
+\textbf{atomove jadro} : polomer radove $10^{-15}$ m, 99,8\% hmotnosti celeho atomu. \\
+sklada se z protonu a neutronu - dohromady nukleony \\
+ve skutecnosti nejsou elemntarni, jsou slozeny z jednodussich castic - kvarku \\
+\textbf{protonove cislo} : z \\
+\textbf{neutronove cislo } N - pocet neutronu \\
+\textbf{nukleove cislo} $A=Z+N$ \\
+$X^A_Z$ \\
+\textbf{prvek} : $O^A_8$ \\
+\textbf{nuklid} :  $C^{12}_6$ \\
+\textbf{izotopy} : $H_1^1$  $H^2_1$  $H^3_1$ \\
+\cor{jestlize jadru dodame E, muze se v nem uvolnit E}{
+  $p_1^1 => n_0^1+e_1^0+v_0^0$ $\ldots$ neutrino
+}
+
+\cor{neutron se muze menit na proton}{
+$n_0^1 => p_1^1+e_{-1}^0+\tilde{v}_0^0$ $\ldots$ atnineutrino
+}
+
+\textbf{Vazebna energie jadra} : atom ma mensi hmotnost, nez soucet hmotnosti volnych nukleonu
+\cor{Vazebne energie}{
+  $E_v=(Zm_p+Nm_n - m_j)c^2=Bc^2$  $\ldots$ B - hmotnostni schodek
+}
+\cor{Vazebna energie pripadajici na jeden nukleon}{
+  $\epsilon = \frac{E_v}{A}$
+}
+
+vazebna energie je zpusobena silnou atomovou interakci. Tyto sily jsou pritazlive a nezavisi na naboji nukleonu. Maji maly dosah. \\
+
+
+\textbf{Radioaktivita} je dej pri kterem se nestabilni jadro rozpada na stabilnejsi \\
+lze umele vyvolat. Napr obohacenim uranu na 235 \\
+\textbf{Reka stability} : nejstabilnejsi jadra maji pomer N:Z = 1 pro Z < 20 \\
+a N:Z = 3:2 pro Z > 20 \\
+\begin{enumerate}[label=\bfseries\tiny\protect\circled{\small\arabic*}]
+  \item $\alpha$ zareni proud  $He_2^4$ \\
+    kladny naboj, velka rychlost, velka energie, mala pronikavost \\
+    typicka pro premeny jader tezkych prvku \\
+  \item $\beta$ proud el. \\
+    asi 100x lepsi pronikave ucinky (kvuli male velikosti), blizi se rychlosti svetla \\
+    elektron se uvolni z jadra premenou neutronu : $n_0^1=p_1^1+e_{-1}^0$ \\
+    $\beta$ + : proud pozitronu $p_1^1=n_0^1+e_{1}^0$ : z lehciho protonu vznika tezsi neutron, nutno dodat E \\
+  \item $\gamma$ elektromagneticke vlneni. nejpronikavejsi, c, doprovazi $\alpha$ a $\beta$,  \\
+\end{enumerate}
+
+\textbf{Polocas rozpadu}  \\
+\cor{zmena poctu jader}{
+  Pocet jader dN, ktera se premeni za dt linearne zavisi na poctu jader \\
+  $dN=-\lambda N dt$ \\
+}
+\frm{
+  $N=N_0e^{-\lambda t}$ \\
+  $\lambda = \frac{\ln 2 }{T}$ \\
+  $N=N_0 2^{-\frac{t}{T}}$
+}
+\cor{Aktivita radioaktivniho zarice}{
+  $A=\frac{dN}{dt}=-N_0 \lambda e^{-\lambda t}$
+}
+
 
 
 \end{document}
